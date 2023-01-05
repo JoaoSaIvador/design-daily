@@ -1,3 +1,10 @@
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
+
 export default function Home() {
-  return <div>Home</div>;
+	const router = useRouter();
+
+	useEffect(() => {
+		router.push('/generalSettings');
+	}, []);
 }
